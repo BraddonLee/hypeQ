@@ -2,6 +2,7 @@ import React, { useState, useEffect, createContext, useContext } from 'react';
 import Header from './components/Header';
 import List from './components/List.js';
 import DurationDropdown from './components/DurationDropdown';
+import TypeDropdown from './components/TypeDropdown';
 
 // const allMedia = [ { media_id: 2, title: "silicon valley", category: "show", duration: 30, priority: 1, url: null, user_id: 1 }, { media_id: 3, title: "queen's gambit" category: "show", duration: 30, priority: 1, url: null, user_id: 1 }, ]
 
@@ -21,7 +22,8 @@ function App() {
 
   return (
     <div className='wrapper'>
-      {/* <div className='tabContainer'><DurationDropdown /></div> */}
+      <span className='tabContainer'><DurationDropdown /></span>
+      <span className='tabContainer'><TypeDropdown /></span>
       <List allMedia={allMedia} />
     </div>
   );
